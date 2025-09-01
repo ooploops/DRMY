@@ -1,0 +1,78 @@
+/* Additional styles for DRMY App */
+
+/* App Store badge styles */
+.app-store-badge {
+    display: inline-block;
+    margin: 10px;
+}
+
+.app-store-badge img {
+    height: 60px;
+    width: auto;
+}
+
+/* Animated elements */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.logo {
+    animation: float 3s ease-in-out infinite;
+}
+
+.feature-icon {
+    transition: transform 0.3s ease;
+}
+
+.feature:hover .feature-icon {
+    transform: scale(1.1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .privacy-section {
+        background: rgba(255,255,255,0.1);
+        color: white;
+    }
+    
+    .privacy-section h2 {
+        color: white;
+    }
+    
+    .hero {
+        background: rgba(255,255,255,0.1);
+        color: white;
+    }
+    
+    .feature {
+        background: rgba(255,255,255,0.1);
+        color: white;
+    }
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 1.5rem;
+    }
+    
+    .feature {
+        padding: 1.5rem;
+    }
+    
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .logo-img {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+    }
+}
